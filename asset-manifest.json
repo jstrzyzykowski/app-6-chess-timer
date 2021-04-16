@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/app-6-chess-timer/static/css/main.1abdb908.chunk.css",
+    "main.js": "/app-6-chess-timer/static/js/main.3d4cafd4.chunk.js",
+    "main.js.map": "/app-6-chess-timer/static/js/main.3d4cafd4.chunk.js.map",
+    "runtime-main.js": "/app-6-chess-timer/static/js/runtime-main.fccd0b58.js",
+    "runtime-main.js.map": "/app-6-chess-timer/static/js/runtime-main.fccd0b58.js.map",
+    "static/js/2.162c9e5b.chunk.js": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js",
+    "static/js/2.162c9e5b.chunk.js.map": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js.map",
+    "index.html": "/app-6-chess-timer/index.html",
+    "static/css/main.1abdb908.chunk.css.map": "/app-6-chess-timer/static/css/main.1abdb908.chunk.css.map",
+    "static/js/2.162c9e5b.chunk.js.LICENSE.txt": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fccd0b58.js",
+    "static/js/2.162c9e5b.chunk.js",
+    "static/css/main.1abdb908.chunk.css",
+    "static/js/main.3d4cafd4.chunk.js"
+  ]
+}
