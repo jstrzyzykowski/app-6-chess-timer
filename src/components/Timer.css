@@ -1,0 +1,99 @@
+.timer {
+  background-color: gray;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timer__player-area {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.timer__player-area.up {
+  transform: rotate(180deg);
+  background-color: #2E3A52;
+}
+
+.timer__player-area.up.activeTurn,
+.timer__player-area.down.activeTurn {
+  background-color: #F5907C;
+}
+
+.timer__player-area.down {
+  background-color: #2E3A52;
+}
+
+.timer__time {
+  font-size: 7.2rem;
+}
+
+.timer__info {
+  font-size: 2.2rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+/* ! z-index check is necessary or remove it ! */
+.timer__buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.timer__buttons button {
+  color: #212121;
+}
+
+.timer__btn-start {
+  height: 5.8rem;
+  width: 5.8rem;
+  border-radius: 5.8rem;
+  border: none;
+  box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.3);
+}
+
+.timer__btn-start i {
+  font-size: 2.8rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+}
+
+.timer__btn-start.paused i {
+  padding-left: 0.4rem;
+}
+
+.timer__btn-settings,
+.timer__btn-reset {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 4.8rem;
+  border: none;
+}
+
+.timer__btn-settings i,
+.timer__btn-reset i {
+  font-size: 2rem;
+} 
+
+.timer__btn-start,
+.timer__btn-settings {
+  margin-right: 2.4rem;
+}
+
+
