@@ -17,7 +17,10 @@ const Timer = () => {
     togglePaused, 
     isPlayerOneTurn, 
     isPlayerTwoTurn ,
-    toggleTurn
+    toggleTurn,
+    setActiveModeTime : reset,
+    setIsPaused,
+    hasGameStarted
   } = useContext(AppContext);
 
   const settingsComponent = settingsVisible 
@@ -57,8 +60,20 @@ const Timer = () => {
 
   const playerOneTimeConverted = convertTime(playerOneTime);
   const playerTwoTimeConverted = convertTime(playerTwoTime);
-  
 
+  const handleClickReset = () => {
+    if(hasGameStarted()) {
+      setIsPaused(true);
+      reset();
+      console.log('Reset completed!')
+    } else console.log('Start the game at first!');
+  };
+
+  const handleClickSettings = () => {
+    setIsPaused(true);
+    toggleVisible();
+  }
+  
   return (
     <div className="timer">
       {settingsComponent}
@@ -71,13 +86,13 @@ const Timer = () => {
         <p className='timer__info'>{generatePlayerInfo(isPlayerTwoTurn)}</p>
       </div>
       <div className="timer__buttons">
-        <button className='timer__btn-settings' onClick={toggleVisible}>
+        <button className='timer__btn-settings' onClick={handleClickSettings}>
           <i className="fas fa-bars"></i>
         </button>
         <button className={startButtonClasses} onClick={togglePaused}>
           {startButtonIcon}
         </button>
-        <button className='timer__btn-reset'>
+        <button className='timer__btn-reset' onClick={handleClickReset}>
           <i className="fas fa-redo-alt"></i>
         </button>
       </div>

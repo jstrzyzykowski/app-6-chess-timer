@@ -73,6 +73,13 @@ const AppProvider = ({ children }) => {
     setPlayerTwoTime(activeMode[0].value * 60);
   };
 
+  const hasGameStarted = () => {
+    const activeMode = modes.filter((mode) => mode.isActive);
+    const modeTime = activeMode[0].value * 60;
+    if((playerOneTime === playerTwoTime) && (playerTwoTime === modeTime)) return false;
+    return true;
+  }
+
   const stopActiveUserTimer = () => {
     if(isPlayerOneTurn) {
       window.clearInterval(idOne.current);
@@ -136,6 +143,18 @@ const AppProvider = ({ children }) => {
     }
   }, [isPlayerTwoTurn]);
 
+  useEffect(() => {
+    if(playerOneTime === 0) {
+      window.clearInterval(idOne.current);
+    }
+  }, [playerOneTime]);
+
+  useEffect(() => {
+    if(playerTwoTime === 0) {
+      window.clearInterval(idTwo.current);
+    }
+  }, [playerTwoTime]);
+
   return(
     <AppContext.Provider value={{
       modes,
@@ -148,7 +167,10 @@ const AppProvider = ({ children }) => {
       togglePaused,
       isPlayerOneTurn,
       isPlayerTwoTurn,
-      toggleTurn
+      toggleTurn,
+      setActiveModeTime,
+      setIsPaused,
+      hasGameStarted
     }}>
       {children}
     </AppContext.Provider>
