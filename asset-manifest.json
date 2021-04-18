@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/app-6-chess-timer/static/css/main.1abdb908.chunk.css",
-    "main.js": "/app-6-chess-timer/static/js/main.0d35e6eb.chunk.js",
-    "main.js.map": "/app-6-chess-timer/static/js/main.0d35e6eb.chunk.js.map",
+    "main.css": "/app-6-chess-timer/static/css/main.bfa5fc76.chunk.css",
+    "main.js": "/app-6-chess-timer/static/js/main.608acea6.chunk.js",
+    "main.js.map": "/app-6-chess-timer/static/js/main.608acea6.chunk.js.map",
     "runtime-main.js": "/app-6-chess-timer/static/js/runtime-main.fccd0b58.js",
     "runtime-main.js.map": "/app-6-chess-timer/static/js/runtime-main.fccd0b58.js.map",
     "static/js/2.162c9e5b.chunk.js": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js",
     "static/js/2.162c9e5b.chunk.js.map": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js.map",
     "index.html": "/app-6-chess-timer/index.html",
-    "static/css/main.1abdb908.chunk.css.map": "/app-6-chess-timer/static/css/main.1abdb908.chunk.css.map",
-    "static/js/2.162c9e5b.chunk.js.LICENSE.txt": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js.LICENSE.txt"
+    "static/css/main.bfa5fc76.chunk.css.map": "/app-6-chess-timer/static/css/main.bfa5fc76.chunk.css.map",
+    "static/js/2.162c9e5b.chunk.js.LICENSE.txt": "/app-6-chess-timer/static/js/2.162c9e5b.chunk.js.LICENSE.txt",
+    "static/media/button_click.90c85414.ogg": "/app-6-chess-timer/static/media/button_click.90c85414.ogg",
+    "static/media/select_mode.3f93180a.ogg": "/app-6-chess-timer/static/media/select_mode.3f93180a.ogg",
+    "static/media/switch.3081cda3.ogg": "/app-6-chess-timer/static/media/switch.3081cda3.ogg"
   },
   "entrypoints": [
     "static/js/runtime-main.fccd0b58.js",
     "static/js/2.162c9e5b.chunk.js",
-    "static/css/main.1abdb908.chunk.css",
-    "static/js/main.0d35e6eb.chunk.js"
+    "static/css/main.bfa5fc76.chunk.css",
+    "static/js/main.608acea6.chunk.js"
   ]
 }
