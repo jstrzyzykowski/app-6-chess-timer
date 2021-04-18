@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 
 
 import Settings from './Settings';
@@ -20,8 +20,13 @@ const Timer = () => {
     toggleTurn,
     setActiveModeTime : reset,
     setIsPaused,
-    hasGameStarted
+    hasGameStarted,
+    switchAudioRef,
+    buttonAudioRef
   } = useContext(AppContext);
+
+  // const switchAudioRef = useRef(null);
+  // const buttonAudioRef = useRef(null);
 
   const settingsComponent = settingsVisible 
   ? <Settings/> 
@@ -73,12 +78,19 @@ const Timer = () => {
     setIsPaused(true);
     toggleVisible();
   }
+
+  const handlePlayerAreaClick = (isAreaPlayerTurn) => {
+    if(isAreaPlayerTurn) {
+      toggleTurn();
+      switchAudioRef.current.play();
+    }
+  }
   
   return (
     <div className="timer">
       {settingsComponent}
       <div className={playerTwoAreaClasses} onClick={() => {
-        if(isPlayerTwoTurn) toggleTurn();
+        handlePlayerAreaClick(isPlayerTwoTurn);
       }}>
         <p className='timer__time'>
           {playerTwoTimeConverted.minutes}:{playerTwoTimeConverted.seconds}
@@ -86,24 +98,35 @@ const Timer = () => {
         <p className='timer__info'>{generatePlayerInfo(isPlayerTwoTurn)}</p>
       </div>
       <div className="timer__buttons">
-        <button className='timer__btn-settings' onClick={handleClickSettings}>
+        <button className='timer__btn-settings' onClick={() => {
+          handleClickSettings();
+          buttonAudioRef.current.play();
+        }}>
           <i className="fas fa-bars"></i>
         </button>
-        <button className={startButtonClasses} onClick={togglePaused}>
+        <button className={startButtonClasses} onClick={() => {
+          togglePaused();
+          buttonAudioRef.current.play();
+        }}>
           {startButtonIcon}
         </button>
-        <button className='timer__btn-reset' onClick={handleClickReset}>
+        <button className='timer__btn-reset' onClick={() => {
+          handleClickReset();
+          buttonAudioRef.current.play();
+        }}>
           <i className="fas fa-redo-alt"></i>
         </button>
       </div>
       <div className={playerOneAreaClasses} onClick={() => {
-        if(isPlayerOneTurn) toggleTurn();
+        handlePlayerAreaClick(isPlayerOneTurn);
       }}>
         <p className='timer__time'>
           {playerOneTimeConverted.minutes}:{playerOneTimeConverted.seconds}
         </p>
         <p className='timer__info'>{generatePlayerInfo(isPlayerOneTurn)}</p>
       </div>
+      {/* <audio ref={switchAudioRef} src={SwitchAudio} typeof='audio/ogg'/>
+      <audio ref={buttonAudioRef} src={ButtonAudio} typeof='audio/ogg'/> */}
     </div>
   );
 }

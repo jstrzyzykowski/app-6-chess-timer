@@ -1,5 +1,9 @@
 import React, { createContext, useEffect, useReducer, useRef, useState } from 'react';
 
+import SwitchAudio from '../assets/audio/switch.ogg';
+import ButtonAudio from '../assets/audio/button_click.ogg';
+import SelectAudio from '../assets/audio/select_mode.ogg';
+
 export const ACTIONS = {
   ADD_MODE: 'add-mode',
   EDIT_MODE: 'edit-mode',
@@ -53,6 +57,10 @@ const AppProvider = ({ children }) => {
 
   const idOne = useRef(null);
   const idTwo = useRef(null);
+
+  const switchAudioRef = useRef(null);
+  const buttonAudioRef = useRef(null);
+  const selectAudioRef = useRef(null);
 
   const toggleTurn = () => {
     setIsPlayerOneTurn((prevValue) => !prevValue);
@@ -170,9 +178,15 @@ const AppProvider = ({ children }) => {
       toggleTurn,
       setActiveModeTime,
       setIsPaused,
-      hasGameStarted
+      hasGameStarted,
+      switchAudioRef,
+      buttonAudioRef,
+      selectAudioRef
     }}>
       {children}
+      <audio ref={switchAudioRef} src={SwitchAudio} typeof='audio/ogg'/>
+      <audio ref={buttonAudioRef} src={ButtonAudio} typeof='audio/ogg'/>
+      <audio ref={selectAudioRef} src={SelectAudio} typeof='audio/ogg'/>
     </AppContext.Provider>
   );
 };

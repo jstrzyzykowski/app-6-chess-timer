@@ -1,5 +1,6 @@
 .timer {
-  background-color: gray;
+  /* background-color: gray; */
+  background-color: #24282C;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -12,21 +13,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: #7e7e7e;
+  background-color: #1B1F22;
 }
 
 .timer__player-area.up {
   transform: rotate(180deg);
-  background-color: #2E3A52;
+  /* background-color: #2E3A52; */
 }
 
 .timer__player-area.up.activeTurn,
 .timer__player-area.down.activeTurn {
-  background-color: #F5907C;
+  /* background-color: #F5907C; */
+  background-color: #FAAA29;
+  box-shadow: inset 0 0 32px #fdc05d;
+  color: whitesmoke;
 }
 
+
 .timer__player-area.down {
-  background-color: #2E3A52;
+  /* background-color: #2E3A52; */
 }
 
 .timer__time {
@@ -35,7 +41,7 @@
 
 .timer__info {
   font-size: 2.2rem;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -54,6 +60,10 @@
 
 .timer__buttons button {
   color: #212121;
+  outline: none;
+  background-color: #1B1F22;
+  box-shadow: inset 0 0 8px #25292E, 0 1px 1px 1px #0e1011, 0 -1px 1px 1px #0e1011;
+  color: rgb(221, 221, 221);
 }
 
 .timer__btn-start {
@@ -61,7 +71,30 @@
   width: 5.8rem;
   border-radius: 5.8rem;
   border: none;
-  box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.3);
+  /* box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.3); */
+  /* box-shadow: 0 0 0 0 rgba(#5a99d4, .5); */
+  /* box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.3); */
+  animation: pulse 1.5s infinite;
+  /* background: #5a99d4; */
+}
+
+.timer__btn-start.paused {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    /* transform: scale(.95); */
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.5), inset 0 0 8px #25292E, 0 1px 1px 1px #0e1011, 0 -1px 1px 1px #0e1011;
+  }
+  70% {
+    /* transform: scale(1); */
+    box-shadow: 0 0 0 20px rgba(255,255,255, 0), inset 0 0 8px #25292E, 0 1px 1px 1px #0e1011, 0 -1px 1px 1px #0e1011;
+  }
+    100% {
+    /* transform: scale(.95); */
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0), inset 0 0 8px #25292E, 0 1px 1px 1px #0e1011, 0 -1px 1px 1px #0e1011;
+  }
 }
 
 .timer__btn-start i {

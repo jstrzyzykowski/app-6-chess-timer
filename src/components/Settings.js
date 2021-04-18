@@ -8,7 +8,12 @@ import './Settings.css';
 const Settings = () => {
 
   // Dispatch here for adding game mode
-  const { modes, dispatch, toggleSettingsVisible : toggleVisible } = useContext(AppContext);
+  const { 
+    modes, 
+    dispatch, 
+    toggleSettingsVisible : toggleVisible,
+    buttonAudioRef
+   } = useContext(AppContext);
 
   const modeComponents = modes.map((mode) => {
     return <Mode key={mode.id} mode={mode} />;
@@ -18,7 +23,10 @@ const Settings = () => {
     <div className="settings">
       <div className="settings__container">
         <div className="settings__header">
-          <i className="fas fa-chevron-left" onClick={toggleVisible}></i>
+          <i className="fas fa-chevron-left" onClick={() => {
+            toggleVisible();
+            buttonAudioRef.current.play();
+          }}></i>
           <p className='settings__header-text'>Settings</p>
         </div>
         <div className="settings__main">
