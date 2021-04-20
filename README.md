@@ -4,15 +4,13 @@
 
 ![](/project-showcase.png)
 
-### 🚨 Project in progress
-
+## 🚨 Project in progress
 - [ ] Implement `add game mode`
 - [ ] Add `isGameOver`
 - [ ] Add media queries
 - [ ] Clean project
 
-### ⚡ Getting Started
-
+## ⚡ Getting Started
 Clone/download the repository on your local machine.
 
 ##### Install dependencies
@@ -23,16 +21,14 @@ Clone/download the repository on your local machine.
 
 `npm start`
 
-### 🛠 Built With
-
+## 🛠 Built With
 - [x] React
 - [x] React Hooks
 - [x] React Context
 - [x] React Reducer
 - [x] Local storage
 
-### ⭐ Features
-
+## ⭐ Features
 - ✔ Persist reducer state also with localStorage
 - ✔ Sounds effects
 
