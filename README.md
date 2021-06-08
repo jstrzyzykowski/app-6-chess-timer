@@ -1,7 +1,5 @@
 # app-6-chess-timer
 
-[![HitCount](http://hits.dwyl.com/jstrzyzykowski/app-6-chess-timer.svg)](http://hits.dwyl.com/jstrzyzykowski/app-6-chess-timer)
-
 ![](/project-showcase.png)
 
 ## 🚨 Project in progress
